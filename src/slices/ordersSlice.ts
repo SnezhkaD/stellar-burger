@@ -13,7 +13,7 @@ type TInitialState = {
   userOrders: TOrder[] | null;
 };
 
-const initialState: TInitialState = {
+export const initialState: TInitialState = {
   orders: [],
   totalOrders: 0,
   ordersToday: 0,

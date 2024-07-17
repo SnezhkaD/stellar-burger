@@ -11,7 +11,7 @@ type TInitialState = {
   isOpenModal: boolean;
 };
 
-const initialState: TInitialState = {
+export const initialState: TInitialState = {
   constructorItems: {
     bun: {
       price: 0
@@ -100,4 +100,5 @@ export const {
   closeModal,
   clearConstructor
 } = constructorItemsSlice.actions;
+
 export default constructorItemsSlice.reducer;

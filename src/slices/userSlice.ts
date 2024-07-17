@@ -18,7 +18,7 @@ type TInitialState = {
   isInit: boolean;
 };
 
-const initialState: TInitialState = {
+export const initialState: TInitialState = {
   user: { name: '', email: '' },
   isLoading: false,
   isAuthChecked: false,
@@ -119,6 +119,12 @@ const userSlice = createSlice({
         if (action.payload.success) {
           state.user = action.payload.user;
         }
+      })
+      .addCase(fetchLogout.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchUpdateUser.pending, (state) => {
+        state.isLoading = true;
       });
   }
 });
