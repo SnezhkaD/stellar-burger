@@ -13,7 +13,7 @@ export type TIngredient = {
 };
 
 export type TConstructorIngredient = TIngredient & {
-  id: string;
+  uniqueId: string;
 };
 
 export type TOrder = {
@@ -35,6 +35,13 @@ export type TOrdersData = {
 export type TUser = {
   email: string;
   name: string;
+};
+
+export type TIngredientItem = TIngredient & { uniqueId: string };
+
+export type TConstructorItems = {
+  bun: Partial<TIngredient>;
+  ingredients: TIngredientItem[];
 };
 
 export type TTabMode = 'bun' | 'sauce' | 'main';
